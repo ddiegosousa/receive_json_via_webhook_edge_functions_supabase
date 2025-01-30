@@ -1,4 +1,4 @@
-# Criação de um webhook no supabase via Edge Functions em TypeScript que recebe um Json e salvan em uma tabela
+# Criação de um webhook no supabase via Edge Functions em TypeScript que recebe um Json e salva em uma tabela
 
 ## Instalação 
 1. Instale o Docker CLI Desktop. 
