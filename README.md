@@ -22,9 +22,14 @@ npx supabase init
 npx supabase login
 ```
 
-5. Alterar o index.ts com o código do GIT.
+4. Executar o comando para criar a funcao:
+```sh
+npx supabase functions new saveTypeFormWebhook
+```
 
-7. Dentro do supabase: crie a tabela om o script abaixo:
+5. Alterar o index.ts.
+
+6. Dentro do supabase: crie a tabela om o script abaixo:
 ```sql
 create table public.webhook_data (
     id uuid default gen_random_uuid() primary key,
@@ -32,11 +37,11 @@ create table public.webhook_data (
     created_at timestamp with time zone default timezone('utc'::text, now()) not null
 );
 ```
-8. Executar o deploy dentro do supabase:
+7. Executar o deploy dentro do supabase:
 ```sh
 npx supabase functions deploy saveTypeFormWebhook --project-ref xyniruiylngpiffzxoxl
 ```
 
-9. Caso queira remover a autorização de token, faça dentro do supabase, dentro da função:
+8. Caso queira remover a autorização de token, faça dentro do supabase, dentro da função:
 Enforce JWT Verification
 Require a valid JWT in the authorization header when invoking the function
